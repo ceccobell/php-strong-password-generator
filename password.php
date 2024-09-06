@@ -1,6 +1,17 @@
 <?php 
 session_start();
 include 'functions.php';
+$allowRepetion = null;
+
+if (isset($_GET['repeatSameCharacter']) && $_GET['repeatSameCharacter']  == 'si') {
+    $allowRepetion = true;
+    var_dump($allowRepetion);
+};
+
+if (isset($_GET['noRepeatSameCharacter']) && $_GET['noRepeatSameCharacter']  == 'no') {
+    $allowRepetion = false;
+    var_dump($allowRepetion);
+};
 
 if (isset($_GET['lunghezzaPassword']) && is_numeric($_GET['lunghezzaPassword']) && $_GET['lunghezzaPassword'] > 0) {
     $_SESSION['password'] = generaPassword($_GET['lunghezzaPassword']);

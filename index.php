@@ -21,7 +21,6 @@ session_start();
                         </label>
                         <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="lunghezzaPassword" id="lunghezzaPassword">
                     </div>
-                    <button type="submit" class="btn btn-primary">Invia</button>
                 </div>
                 <div class="row">
                     <div class="col-4 d-flex mt-3">
@@ -40,6 +39,7 @@ session_start();
                         </div>
                     </div>
                 </div>
+                <button type="submit" class="btn btn-primary mt-3">Invia</button>
             </form>
         </div>
     </div>
