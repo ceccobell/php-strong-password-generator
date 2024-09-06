@@ -14,7 +14,7 @@ if (isset($_GET['noRepeatSameCharacter']) && $_GET['noRepeatSameCharacter']  == 
 };
 
 if (isset($_GET['lunghezzaPassword']) && is_numeric($_GET['lunghezzaPassword']) && $_GET['lunghezzaPassword'] > 0) {
-    $_SESSION['password'] = generaPassword($_GET['lunghezzaPassword']);
+    $_SESSION['password'] = generaPassword($_GET['lunghezzaPassword'], $allowRepetion);
 }
 ?>
 
