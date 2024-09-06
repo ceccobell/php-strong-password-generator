@@ -38,6 +38,26 @@ session_start();
                             </label>
                         </div>
                     </div>
+                    <div class="col-12 mt-3 d-flex">
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" value="true" name="containOnlyLetter" id="containOnlyLetter">
+                            <label class="form-check-label" for="containOnlyLetter">
+                                Lettere
+                            </label>
+                        </div>
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" value="true" name="containOnlyNumbers" id="containOnlyNumbers">
+                            <label class="form-check-label" for="containOnlyNumbers">
+                                Numeri
+                            </label>
+                        </div>
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" value="true" name="containOnlySpecialChars" id="containOnlySpecialChars">
+                            <label class="form-check-label" for="containOnlySpecialChars">
+                                Caratteri Speciali
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary mt-3">Invia</button>
             </form>
