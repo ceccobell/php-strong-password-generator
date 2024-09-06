@@ -2,6 +2,9 @@
 session_start();
 include 'functions.php';
 $allowRepetion = null;
+$containOnlyLetter = null;
+$containOnlyNumbers = null;
+$containOnlySpecialChars = null;
 
 if (isset($_GET['repeatSameCharacter']) && $_GET['repeatSameCharacter']  == 'si') {
     $allowRepetion = true;
@@ -11,8 +14,20 @@ if (isset($_GET['noRepeatSameCharacter']) && $_GET['noRepeatSameCharacter']  == 
     $allowRepetion = false;
 };
 
+if (isset($_GET['containOnlyLetter']) && isset($_GET['containOnlyLetter']) == 'si') {
+    $containOnlyLetter = true;
+};
+
+if (isset($_GET['containOnlyNumbers']) && isset($_GET['containOnlyNumbers']) == 'si') {
+    $containOnlyNumbers = true;
+};
+
+if (isset($_GET['containOnlySpecialChars']) && isset($_GET['containOnlySpecialChars']) == 'si') {
+    $containOnlySpecialChars = true;
+};
+
 if (isset($_GET['lunghezzaPassword']) && is_numeric($_GET['lunghezzaPassword']) && $_GET['lunghezzaPassword'] > 0) {
-    $_SESSION['password'] = generaPassword($_GET['lunghezzaPassword'], $allowRepetion);
+    $_SESSION['password'] = generaPassword($_GET['lunghezzaPassword'], $allowRepetion ,$containOnlyLetter, $containOnlyNumbers, $containOnlySpecialChars);
 }
 ?>
 

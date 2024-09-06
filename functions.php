@@ -1,6 +1,15 @@
 <?php
-function generaPassword($lunghezza, $allowRepetionChars) {
-    $caratteri = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ|!"£$%&/()=?^_-:.;,@ç°à#§ù*+][èé><';
+function generaPassword($lunghezza, $allowRepetionChars, $containOnlyLetter = false, $containOnlyNumbers = false, $containOnlySpecialChars = false) {
+    if ($containOnlyLetter) {
+        $caratteri = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    } elseif ($containOnlyNumbers) {
+        $caratteri = '0123456789';
+    } elseif ($containOnlySpecialChars) {
+        $caratteri = '|!"£$%&/()=?^_-:.;,@ç°à#§ù*+][èé><';
+    } else {
+        $caratteri = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ|!"£$%&/()=?^_-:.;,@ç°à#§ù*+][èé><';
+    };
+
     $stringaRandom = '';
 
     if ($allowRepetionChars) {
