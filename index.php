@@ -7,8 +7,10 @@ function generaPassword($lunghezza) {
     }
     return $stringaRandom;
 };
+if (isset($_GET['lunghezzaPassword']) && is_numeric($_GET['lunghezzaPassword']) && $_GET['lunghezzaPassword'] > 0) {
+    $password = generaPassword($_GET['lunghezzaPassword']);
+}
 
-$password = generaPassword($_GET['lunghezza password']);
  
 ?>
 
@@ -29,10 +31,17 @@ $password = generaPassword($_GET['lunghezza password']);
                         <label class="form-check-label" for="flexCheckDefault">
                             Lunghezza Password:
                         </label>
-                        <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="lunghezza password">
+                        <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="lunghezzaPassword">
                     </div>
+                    <button type="submit" class="btn btn-primary">Invia</button>
                 </div>
-                <button type="submit" class="btn btn-primary">Invia</button>
+                <div class="col-8">
+                    <h1>Password generata:</h1>
+                    <h2>
+                        <?php if (isset($password)) {
+                            echo $password;
+                        } ?></h2>
+                </div>
             </form>
         </div>
     </div>
