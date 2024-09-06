@@ -23,6 +23,23 @@ session_start();
                     </div>
                     <button type="submit" class="btn btn-primary">Invia</button>
                 </div>
+                <div class="row">
+                    <div class="col-4 d-flex mt-3">
+                        <div class="me-3">Consenti di ripetere lo stesso carattere:</div>
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" value="si" name="repeatSameCharacter" id="repeatSameCharacter">
+                            <label class="form-check-label" for="repeatSameCharacter">
+                                Si
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="no" name="noRepeatSameCharacter" id="noRepeatSameCharacter">
+                            <label class="form-check-label" for="noRepeatSameCharacter">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
