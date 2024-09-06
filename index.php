@@ -1,5 +1,5 @@
 <?php
-include 'functions.php'
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -13,22 +13,15 @@ include 'functions.php'
 <body>
     <div class="container">
         <div class="row">
-            <form action="index.php" method="get">
+            <form action="password.php" method="get">
                 <div class="col-4 mt-5">
                     <div class="mb-3">
                         <label class="form-check-label" for="flexCheckDefault">
                             Lunghezza Password:
                         </label>
-                        <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="lunghezzaPassword">
+                        <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="lunghezzaPassword" id="lunghezzaPassword">
                     </div>
                     <button type="submit" class="btn btn-primary">Invia</button>
-                </div>
-                <div class="col-8">
-                    <h1>Password generata:</h1>
-                    <h2>
-                        <?php if (isset($password)) {
-                            echo $password;
-                        } ?></h2>
                 </div>
             </form>
         </div>
